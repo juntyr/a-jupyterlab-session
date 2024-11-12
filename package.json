@@ -5,8 +5,7 @@
     "keywords": [
         "jupyter",
         "jupyterlab",
-        "jupyterlite",
-        "jupyterlite-extension"
+        "jupyterlab-extension"
     ],
     "homepage": "https://github.com/juntyr/a-jupyterlab-session",
     "bugs": {
@@ -56,10 +55,10 @@
         "watch:labextension": "jupyter labextension watch ."
     },
     "dependencies": {
+        "@jupyterlab/application": "^4.0.0",
         "@jupyterlab/coreutils": "^6.0.0",
-        "@jupyterlite/contents": "^0.4.2",
-        "@jupyterlite/server": "^0.4.2",
-        "uuid": "^11.0.0"
+        "@jupyterlab/filebrowser": "^4.0.0",
+        "@jupyterlab/services": "^7.0.0"
     },
     "devDependencies": {
         "@jupyterlab/builder": "^4.0.0",
@@ -98,20 +97,7 @@
     },
     "jupyterlab": {
         "extension": true,
-        "outputDir": "a_jupyterlab_session/labextension",
-        "sharedPackages": {
-            "@jupyterlite/contents": {
-                "bundled": false,
-                "singleton": true
-            },
-            "@jupyterlite/server": {
-                "bundled": false,
-                "singleton": true
-            }
-        }
-    },
-    "jupyterlite": {
-        "liteExtension": true
+        "outputDir": "a_jupyterlab_session/labextension"
     },
     "eslintIgnore": [
         "node_modules",
